@@ -1,0 +1,69 @@
+#mapid { 
+	height: 400px;
+	margin-top: 3%;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+#navbar {
+	margin-left: 5%;
+	margin-top: 3%;
+}
+
+.title_page {
+	margin-top: 3%;
+	text-align: center;
+	font-family: 'bluu';
+}
+
+.myformcontact {
+	margin-top: 4%;
+	font-family: "Montserrat", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.myformcontact li { 
+	display: block;
+}
+
+
+
+@font-face {
+    font-family: 'bluu';
+    src: url('bluunext-bold-webfont.woff2') format('woff2'),
+         url('bluunext-bold-webfont.woff') format('woff'),
+         url('bluunext-bold.ttf') format('truetype'),
+         url('bluunext-bold-webfont.svg#bluu_nextbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.buttonEnvoyer {
+	color: white;
+	background: #6565EE;
+	font-family: "Montserrat";
+	height: 40px;
+	margin-top: 3%;
+
+}
+
+.buttonEnvoyer:hover {
+	 color: black;
+}
+
+img {
+	max-width: 30%;
+	height: auto;
+}
+
+.text-uppercase {
+	 font-family: 'bluu';
+	 margin-top: 10%;
+}
+
+.textfooter {
+	font-family: "Montserrat";
+}

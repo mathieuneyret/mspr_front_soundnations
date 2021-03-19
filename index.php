@@ -11,12 +11,12 @@
 
 <body>
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-  	<a class="navbar-brand" href="index.php">Accueil</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    	<span class="navbar-toggler-icon"></span>
-  	</button>
-
-  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<a class="navbar-brand" href="index.php">Accueil</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
     	<ul class="navbar-nav mr-auto">
     	  <li class="nav-item">
     	    <a class="nav-link" href="infos.php">Informations générales et actualités</a>
@@ -47,50 +47,13 @@
         </li>
       </ul>
   	</div>
-	</nav>
+	  </nav>
 
-	<h2 class="title_page"> Contactez-nous </h2>
+	<h2 class="title_page"> Accueil </h2>
 
 	<div class="container">
-		<form class="myformcontact" method="post">
-                <p>
-					<label for="name"> Nom : </label>
-					<input type="text" id="name" name="nom" />
-                </p>
-				<p>
-					<label for="name"> Prénom : </label>
-					<input type="text" id="name" name="prenom" />
-                </p>
-                <p>
-                    <label for="mail"> E-mail : </label>
-                    <input type="email" id="mail" name="mail" />
-                </p>
-                <p>
-					<label for="phone"> Téléphone : </label>
-					<input type="tel" id="tel" name="phone" />
-                </p>
-                <p>
-					<label for="msg"> Message : </label>
-					<textarea id="msg" name="message"></textarea>
-                </p>
-				<input class="buttonEnvoyer" type="submit" name="valider" value="Envoyer"/>
-
-		</form>
+		<script type="text/javascript" src="js/script.js"></script>
 	</div>
-	<p>
-		<?php
-		if (isset($_POST['nom'])) {
-			$mysqli = new mysqli("localhost", "root", "", "msprfrontsoundnations");
-            $mysqli -> set_charset("utf8");
-            $requete='INSERT INTO formulaire VALUES(NULL, "' . $_POST['nom'] . '","' . $_POST['prenom'] . '", "' . $_POST['mail'] . '", "' . $_POST['phone'] . '", "' . $_POST['message'] . '")';
-            $resultat = $mysqli -> query($requete);
-            if ($resultat)
-                echo "<p>Votre demande a bien été formulé</p>";
-            else
-                echo "<p>Erreur</p>";
-		}
-		?>
-		</p>
 
 </body>
 

@@ -18,42 +18,42 @@
 <body>
 
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="index.html">Accueil</a>
+		<a class="navbar-brand" href="index.php">Accueil</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
   
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		  <ul class="navbar-nav mr-auto">
-			<li class="nav-item">
-			  <a class="nav-link" href="infos.html">Informations générales et actualités</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="concerts.html">Concerts</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="programmes.html">Programmes</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="billeterie.html">Billeterie</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="faq.html">Informations pratiques & FAQ</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="reseaux.html">Réseaux sociaux</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="partenaires.html">Partenaires</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="cartes.html">Cartes</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="contact.php">Contact</a>
-		  </li>
-		</ul>
-		</div>
+    	<ul class="navbar-nav mr-auto">
+    	  <li class="nav-item">
+    	    <a class="nav-link" href="infos.php">Informations générales et actualités</a>
+    	  </li>
+      	<li class="nav-item">
+      		<a class="nav-link" href="concerts.php">Concerts</a>
+      	</li>
+      	<li class="nav-item">
+      		<a class="nav-link" href="programmes.php">Programmes</a>
+      	</li>
+      	<li class="nav-item">
+      		<a class="nav-link" href="billeterie.php">Billeterie</a>
+      	</li>
+      	<li class="nav-item">
+      		<a class="nav-link" href="faq.php">Informations pratiques & FAQ</a>
+      	</li>
+      	<li class="nav-item">
+      		<a class="nav-link" href="reseaux.php">Réseaux sociaux</a>
+      	</li>
+      	<li class="nav-item">
+      		<a class="nav-link" href="partenaires.php">Partenaires</a>
+      	</li>
+      	<li class="nav-item">
+      		<a class="nav-link" href="cartes.php">Cartes</a>
+      	</li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact</a>
+        </li>
+      </ul>
+  	</div>
 	  </nav>
 
   <h2 class="title_page"> Carte </h2>
@@ -67,4 +67,9 @@
 	</div>
 
 </body>
+<footer>
+	<?php include("footer.html") ?>
+</footer>
+
+
 </html>
