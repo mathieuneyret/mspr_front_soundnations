@@ -5,6 +5,10 @@
 	margin-right: 15%;
 }
 
+#logo_header {
+	width: 100px;
+}
+
 #navbar {
 	margin-left: 5%;
 	margin-top: 3%;
@@ -13,7 +17,7 @@
 .title_page {
 	margin-top: 3%;
 	text-align: center;
-	font-family: 'bluu';
+	font-family: 'Montserrat', sans-serif;
 }
 
 .myformcontact {
@@ -28,6 +32,7 @@
 .myformcontact p { 
 	display: block;
 }
+
 
 .text-uppercase {
 	font-family: 'bluu';
@@ -78,7 +83,7 @@
 
 	.first_line_image_reseaux > .imageGauche {
 		float: left;
-		height: 150px;
+		height: 200px;
 		margin-left: 20%;
 	}
 
@@ -167,47 +172,47 @@
 	}
 	
 	.second_line_image_reseaux {
-		margin-top: 20%;
+		margin-top: 25%;
 	}
 
 	.third_line_image_reseaux {
-		margin-top: 40%;
+		margin-top: 55%;
 	}
 
 	.first_line_image_reseaux > .imageGauche {
 		float: left;
 		margin-left: 20%;
-		height: 50px;
+		height: 80px;
 	}
 	
 	.first_line_image_reseaux > .imageDroite {
 		float: right;
 		margin-right: 20%;
-		height: 50px;
+		height: 80px;
 	}
 
 	.second_line_image_reseaux > .imageGauche {
 		float: left;
 		margin-left: 20%;
-		height: 50px;
+		height: 80px;
 	}
 	
 	.second_line_image_reseaux > .imageDroite {
 		float: right;
 		margin-right: 20%;
-		height: 50px;
+		height: 80px;
 	}
 
 	.third_line_image_reseaux > .imageGauche {
 		float: left;
 		margin-left: 20%;
-		height: 50px;
+		height: 80px;
 	}
 	
 	.third_line_image_reseaux > .imageDroite {
 		float: right;
 		margin-right: 20%;
-		height: 50px;
+		height: 80px;
 	}
 	
 	.second_line_image_partenaires > .imageGauche {
@@ -251,6 +256,7 @@
 }
 
 .accordion {
+	font-family: "Montserrat", sans-serif;
 	background-color: #eee;
 	color: #444;
 	cursor: pointer;
@@ -269,6 +275,7 @@
   }
   
   .panel {
+	font-family: "Montserrat", sans-serif;
 	padding: 0 18px;
 	display: none;
 	background-color: white;

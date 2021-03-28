@@ -1,59 +1,36 @@
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title> Sound Nations - Programmes </title>
-   <link rel="stylesheet" href="css/style.css">
-   <!-- bootstrap 4.5 -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Programmes</title>
 </head>
-
 <body>
-	<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="index.php">Accueil</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>
-  
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    	<ul class="navbar-nav mr-auto">
-    	  <li class="nav-item">
-    	    <a class="nav-link" href="infos.php">Informations générales et actualités</a>
-    	  </li>
-      	<li class="nav-item">
-      		<a class="nav-link" href="concerts.php">Concerts</a>
-      	</li>
-      	<li class="nav-item">
-      		<a class="nav-link" href="programmes.php">Programmes</a>
-      	</li>
-      	<li class="nav-item">
-      		<a class="nav-link" href="billeterie.php">Billeterie</a>
-      	</li>
-      	<li class="nav-item">
-      		<a class="nav-link" href="faq.php">Informations pratiques & FAQ</a>
-      	</li>
-      	<li class="nav-item">
-      		<a class="nav-link" href="reseaux.php">Réseaux sociaux</a>
-      	</li>
-      	<li class="nav-item">
-      		<a class="nav-link" href="partenaires.php">Partenaires</a>
-      	</li>
-      	<li class="nav-item">
-      		<a class="nav-link" href="cartes.php">Cartes</a>
-      	</li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
-        </li>
-      </ul>
-  	</div>
-	  </nav>
+	
+	<?php include("header.php"); ?>
 
-	<h2 class="title_page"> Pogrammes </h2>
+	<?php
 
-	<div class="container">
-		
-	</div>
+	    $reponse = $bdd->query("SELECT * FROM scene, heure, artiste, programmes WHERE programmes.idArtiste = artiste.id AND programmes.idScene = scene.id AND programmes.idHeure = heure.id ORDER BY programmes.id");
+
+    ?>
+
+	<h2 class="title_page"> Programmes </h2>
+
+        <?php while($donnees = $reponse-> fetch())
+            {
+        ?>
+            <button class="accordion"><?php echo $donnees['date']; ?></button>
+            <div class="panel">
+                <p class="nom_artiste"> <?php echo $donnees['nom_artiste']; ?> </p> 
+                <p class="nom_scene"> <?php echo $donnees['nom_scene']; ?> </p>
+                <p class="heure"> <?php echo $donnees['heure']; ?> </p>
+            </div>
+        <?php
+            }
+            $reponse->closeCursor();
+        ?>
+
+<script type="text/javascript" src="js/faq_programmes.js"></script>
 
 </body>
 
