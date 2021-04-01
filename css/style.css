@@ -39,6 +39,14 @@
 	margin-top: 10%;
 }
 
+#buttonProgrammeFrench {
+	text-transform: lowercase;
+}
+
+#buttonProgrammeFrench::first-letter {
+	text-transform: uppercase;
+}
+
 .textfooter {
    font-family: "Montserrat";
 }

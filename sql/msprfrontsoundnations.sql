@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 28 mars 2021 à 10:28
+-- Généré le :  jeu. 01 avr. 2021 à 08:45
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.4.14
 
@@ -63,12 +63,12 @@ CREATE TABLE IF NOT EXISTS `billeterie` (
 --
 
 INSERT INTO `billeterie` (`id`, `date_prix`, `prix`) VALUES
-(1, 'Pass 3 jour', 90),
-(2, 'Vendredi 18 juillet', 40),
-(3, 'Samedi 19 juillet', 40),
-(4, 'Dimanche 20 juillet', 40),
-(5, 'Lundi 21 juillet', 40),
-(6, 'Mardi 22 juillet', 40);
+(1, 'Pass 3 jours', 90),
+(2, 'Dimanche 18 juillet', 40),
+(3, 'Lundi 19 juillet', 40),
+(4, 'Mardi 20 juillet', 40),
+(5, 'Mercredi 21 juillet', 40),
+(6, 'Jeudi 22 juillet', 40);
 
 -- --------------------------------------------------------
 
@@ -105,7 +105,7 @@ INSERT INTO `formulaire` (`id`, `nom`, `prenom`, `mail`, `phone`, `message`) VAL
 DROP TABLE IF EXISTS `heure`;
 CREATE TABLE IF NOT EXISTS `heure` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `heure` varchar(50) NOT NULL,
+  `heure` time NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
@@ -114,9 +114,9 @@ CREATE TABLE IF NOT EXISTS `heure` (
 --
 
 INSERT INTO `heure` (`id`, `heure`) VALUES
-(1, '20H'),
-(2, '21H'),
-(3, '22H');
+(1, '20:00:00'),
+(2, '21:00:00'),
+(3, '22:00:00');
 
 -- --------------------------------------------------------
 
@@ -127,7 +127,7 @@ INSERT INTO `heure` (`id`, `heure`) VALUES
 DROP TABLE IF EXISTS `programmes`;
 CREATE TABLE IF NOT EXISTS `programmes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `date` varchar(100) NOT NULL,
+  `date` date NOT NULL,
   `idArtiste` int(11) NOT NULL,
   `idScene` int(11) NOT NULL,
   `idHeure` int(11) NOT NULL,
@@ -142,11 +142,11 @@ CREATE TABLE IF NOT EXISTS `programmes` (
 --
 
 INSERT INTO `programmes` (`id`, `date`, `idArtiste`, `idScene`, `idHeure`) VALUES
-(1, 'Vendredi 18 juillet', 1, 1, 1),
-(2, 'Samedi 19 juillet', 2, 3, 3),
-(3, 'Dimanche 20 juillet', 1, 2, 2),
-(4, 'Lundi 21 juillet', 3, 1, 2),
-(5, 'Mardi 22 juillet', 2, 3, 1);
+(1, '2021-07-18', 1, 1, 1),
+(2, '2021-07-19', 2, 3, 3),
+(3, '2021-07-20', 1, 2, 2),
+(4, '2021-07-21', 3, 1, 2),
+(5, '2021-07-22', 2, 3, 1);
 
 -- --------------------------------------------------------
 

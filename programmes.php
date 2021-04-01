@@ -19,11 +19,22 @@
         <?php while($donnees = $reponse-> fetch())
             {
         ?>
-            <button class="accordion"><?php echo $donnees['date']; ?></button>
+            <button id="buttonProgrammeFrench"class="accordion">
+            <?php
+            $date = $donnees['date'];
+            setlocale(LC_TIME, 'fr', 'fr_FR', 'fr_FR.ISO8859-1');
+            echo strftime("%A %d %B", strtotime($date));
+            ?>
+            </button>
             <div class="panel">
                 <p class="nom_artiste"> <?php echo $donnees['nom_artiste']; ?> </p> 
                 <p class="nom_scene"> <?php echo $donnees['nom_scene']; ?> </p>
-                <p class="heure"> <?php echo $donnees['heure']; ?> </p>
+                <p class="heure"> 
+                <?php
+                $heure = $donnees['heure'];
+                echo strftime("%H", strtotime($heure)) . "H";
+                ?> 
+                </p>
             </div>
         <?php
             }
