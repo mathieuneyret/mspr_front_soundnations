@@ -27,7 +27,8 @@
             ?>
             </button>
             <div class="panel">
-                <p class="nom_artiste"> <?php echo $donnees['nom_artiste']; ?> </p> 
+                <p class="nom_artiste"> <?php echo $donnees['nom_artiste']; ?> </p>
+                <img class="photo_artiste" src="images/artistes/<?php echo $donnees['photo_artiste']; ?>" alt="Photo_artiste" />
                 <p class="nom_scene"> <?php echo $donnees['nom_scene']; ?> </p>
                 <p class="heure"> 
                 <?php

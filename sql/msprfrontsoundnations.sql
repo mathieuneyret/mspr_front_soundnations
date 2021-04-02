@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 01 avr. 2021 à 08:45
+-- Généré le :  ven. 02 avr. 2021 à 19:46
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.4.14
 
@@ -32,6 +32,7 @@ DROP TABLE IF EXISTS `artiste`;
 CREATE TABLE IF NOT EXISTS `artiste` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom_artiste` varchar(100) NOT NULL,
+  `photo_artiste` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
@@ -39,10 +40,10 @@ CREATE TABLE IF NOT EXISTS `artiste` (
 -- Déchargement des données de la table `artiste`
 --
 
-INSERT INTO `artiste` (`id`, `nom_artiste`) VALUES
-(1, 'David Guetta'),
-(2, 'Rihanna'),
-(3, 'Ariana Grande');
+INSERT INTO `artiste` (`id`, `nom_artiste`, `photo_artiste`) VALUES
+(1, 'David Guetta', 'David_Guetta.jpg'),
+(2, 'Rihanna', 'Rihanna.jpg'),
+(3, 'Ariana Grande', 'Ariana_Grande.jpg');
 
 -- --------------------------------------------------------
 
