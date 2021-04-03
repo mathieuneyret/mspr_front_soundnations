@@ -41,7 +41,7 @@ die('Erreur : ' . $e->getMessage());
       		<a class="nav-link" href="billeterie.php">Billeterie</a>
       	</li>
       	<li class="nav-item">
-      		<a class="nav-link" href="faq.php">Informations pratiques & FAQ</a>
+      		<a class="nav-link" href="faq.php">FAQ</a>
       	</li>
       	<li class="nav-item">
       		<a class="nav-link" href="reseaux.php">Réseaux sociaux</a>
